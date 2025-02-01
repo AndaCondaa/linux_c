@@ -38,6 +38,19 @@ int main(){
     printVal = a & (1<<0);
     printVal = printVal >> 0;
     printf("%d ", printVal);
+    
+    printf("\n");
+
+    char test1 = 0xC6;
+    char test2;
+    test2 = test1 << 2;
+
+
+    printf("%#x\n", test1);
+    printf("%#x\n", test1 << 1);
+    printf("%#x\n", test1 >> 2 );
+    printf("size: %d\n", sizeof(test1));
+    printf("%#x\n", test2);
 
     return 0;
 }
