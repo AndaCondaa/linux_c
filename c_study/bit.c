@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-
 int main(){
-    char a = -1;
+    char a = 0x30;
 
     //char Val = 0;
     char printVal = 0;
@@ -10,7 +9,7 @@ int main(){
     printVal = a & (1<<7);
     printVal = printVal >> 7;
     printf("%d ", printVal);
-
+    
     printVal = a & (1<<6);
     printVal = printVal >> 6;
     printf("%d ", printVal);
@@ -21,7 +20,7 @@ int main(){
 
     printVal = a & (1<<4);
     printVal = printVal >> 4;
-    printf("%d ", printVal);
+    printf("%d  ", printVal);
 
     printVal = a & (1<<3);
     printVal = printVal >> 3;
@@ -41,16 +40,15 @@ int main(){
     
     printf("\n");
 
-    char test1 = 0xC6;
-    char test2;
-    test2 = test1 << 2;
+    char test = 0x30;
+    printf("%#x\n", test);
 
+    test |= 0b0100;
+    printf("%#x\n", test);
 
-    printf("%#x\n", test1);
-    printf("%#x\n", test1 << 1);
-    printf("%#x\n", test1 >> 2 );
-    printf("size: %d\n", sizeof(test1));
-    printf("%#x\n", test2);
+    test &= ~(1 << 5);
+    printf("%#x\n", test);
+    printf("%#x\n", ~(1 << 2));
 
     return 0;
 }
